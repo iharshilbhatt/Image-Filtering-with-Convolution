@@ -31,5 +31,6 @@ Unsharp Mask: Enhances edges by subtracting a blurred version of the image from 
 Custom Kernel: Example of a custom kernel for edge detection with different weightings.
 
 Contributing
+
 Contributions are welcome! Please feel free to submit a Pull Request.
 
