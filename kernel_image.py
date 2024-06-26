@@ -98,6 +98,34 @@ cv2_imshow(im_out)
 
 # Edge enhancement filter
 edge_enhance = np.array([[-1, -1, -1], [-1, 9, -1], [-1, -1, -1]])
+
+# 11. Laplacian filter for edge detection
+laplacian = np.array([[0, 1, 0], [1, -4, 1], [0, 1, 0]])
+apply_filter(img, laplacian)
+
+# 12. Sobel filter for edge detection (X direction)
+sobel_x = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+apply_filter(img, sobel_x)
+
+# 13. Sobel filter for edge detection (Y direction)
+sobel_y = np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])
+apply_filter(img, sobel_y)
+
+# 14. Prewitt filter for edge detection (X direction)
+prewitt_x = np.array([[-1, 0, 1], [-1, 0, 1], [-1, 0, 1]])
+apply_filter(img, prewitt_x)
+
+# 15. Prewitt filter for edge detection (Y direction)
+prewitt_y = np.array([[-1, -1, -1], [0, 0, 0], [1, 1, 1]])
+apply_filter(img, prewitt_y)
+
+# 16. Unsharp mask (enhances edges)
+unsharp = np.array([[-1, -1, -1], [-1, 9, -1], [-1, -1, -1]])
+apply_filter(img, unsharp)
+
+# 17. Custom kernel (example: edge detection with different weights)
+custom_kernel = np.array([[1, 1, 1], [1, -7, 1], [1, 1, 1]])
+apply_filter(img, custom_kernel)
 kernel = edge_enhance
 im = np.array(img, dtype=float)
 im_convol = convolve(im, kernel)
