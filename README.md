@@ -20,3 +20,16 @@ Required Python packages: numpy, pandas, matplotlib, Pillow, scipy, opencv-pytho
 Install the required packages using pip:
 ```bash
 pip install numpy pandas matplotlib Pillow scipy opencv-python
+```
+This script defines and applies a variety of convolution kernels to an image, including identity, edge detection, sharpening, blurring, and custom filters. Each filter is applied using a helper function apply_filter which simplifies the convolution process and image display.
+
+More Filters Description
+Laplacian Filter: Detects edges in an image by approximating the second derivative of the image.
+Sobel Filters (X and Y): Detects edges in the X and Y directions using Sobel operators.
+Prewitt Filters (X and Y): Another method for detecting edges, similar to Sobel but with different weightings.
+Unsharp Mask: Enhances edges by subtracting a blurred version of the image from the original image.
+Custom Kernel: Example of a custom kernel for edge detection with different weightings.
+
+Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
